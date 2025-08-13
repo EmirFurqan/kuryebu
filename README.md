@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# kuryebu
 
-## Getting Started
+Modern ve kullanıcı dostu kurye bulma platformu. React ve Next.js ile geliştirilmiş, mobil uyumlu web uygulaması.
 
-First, run the development server:
+## 🚀 Özellikler
+
+- 📍 **Konum Seçimi**: Adres yazma ve otomatik öneriler
+- 🗺️ **Rota Görüntüleme**: Harita üzerinde rota ve mesafe bilgileri
+- 📱 **Mobil Uyumlu**: Responsive tasarım
+- 🔍 **Akıllı Arama**: OpenStreetMap API ile gerçek zamanlı adres önerileri
+- 📞 **WhatsApp Entegrasyonu**: Direkt kurye çağırma
+
+## 🛠️ Teknolojiler
+
+- **Frontend**: React 18, Next.js 14
+- **Harita**: Leaflet.js, OpenStreetMap
+- **Stil**: Tailwind CSS
+- **İkonlar**: Lucide React
+- **API**: OpenStreetMap Nominatim, OSRM
+
+## 🎨 Tasarım
+
+- Ana Renkler: `#ED6B1D` (Turuncu), `#74B751` (Yeşil)
+- Modern ve temiz arayüz
+- Mobil öncelikli tasarım
+
+## 📱 Kullanım
+
+1. **Adres Girişi**: "Nereden" ve "Nereye" alanlarına adres yazın
+2. **Konum Alma**: 📍 butonuna tıklayarak mevcut konumunuzu kullanın
+3. **Rota Görüntüleme**: "Rotayı Görüntüle" butonuna tıklayın
+4. **Kurye Çağırma**: "Kurye Bul" butonu ile WhatsApp'tan mesaj gönderin
+
+## 🚀 Kurulum
 
 ```bash
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme sunucusunu başlatın
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Production build
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Canlı Demo
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+[Kurye Bul](https://kuryebu.vercel.app)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📄 Lisans
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
