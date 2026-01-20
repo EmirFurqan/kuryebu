@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-    const { slug } = params;
+    const { slug } = await params;
 
     // Format slug to readable title
     // e.g. "fatih-aksaray-kurye" -> "Fatih Aksaray Kurye"
