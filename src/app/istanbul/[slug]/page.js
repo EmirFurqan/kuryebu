@@ -1,5 +1,5 @@
-import HomeTemplate from '../../components/HomeTemplate';
-import { locations, getNeighborhoodName } from '../../lib/locations';
+import HomeTemplate from '../../../components/HomeTemplate';
+import { locations, getNeighborhoodName } from '../../../lib/locations';
 
 // Generate static params for all possible location combinations
 export async function generateStaticParams() {
