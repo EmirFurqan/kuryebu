@@ -43,16 +43,25 @@ export default function HomeTemplate() {
         setLoading(true)
         try {
             const response = await fetch(
-                `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&countrycodes=tr&limit=5&addressdetails=1`
+                `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query + ' İstanbul')}&countrycodes=tr&limit=10&addressdetails=1`
             )
             const data = await response.json()
 
-            const suggestions = data.map(item => ({
-                id: item.place_id,
-                display_name: item.display_name,
-                lat: item.lat,
-                lon: item.lon
-            }))
+            const suggestions = data
+                .filter(item => {
+                    const addr = item.address
+                    if (!addr) return false
+                    // İstanbul kontrolü (farklı yazımlar için)
+                    const city = addr.province || addr.state || addr.city || ''
+                    return city.toLowerCase().includes('istanbul') || item.display_name.toLowerCase().includes('istanbul')
+                })
+                .slice(0, 5) // En iyi 5 sonucu al
+                .map(item => ({
+                    id: item.place_id,
+                    display_name: item.display_name,
+                    lat: item.lat,
+                    lon: item.lon
+                }))
 
             setSuggestions(suggestions)
         } catch (error) {
