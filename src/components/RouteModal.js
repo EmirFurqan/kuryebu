@@ -117,7 +117,7 @@ export default function RouteModal({ isOpen, onClose, fromLocation, toLocation }
               
               {route && (
                 <div className="bg-gray-50 p-3 md:p-4 rounded-lg">
-                  <div className="grid grid-cols-3 gap-2 md:gap-4 text-center">
+                  <div className="grid grid-cols-2 gap-2 md:gap-4 text-center">
                     <div>
                       <div className="text-lg md:text-2xl font-bold text-[#74B751]">
                         {Math.round(route.distance / 1000 * 10) / 10}
@@ -129,12 +129,6 @@ export default function RouteModal({ isOpen, onClose, fromLocation, toLocation }
                         {Math.round(route.duration / 60)}
                       </div>
                       <div className="text-xs md:text-sm text-gray-600">dakika</div>
-                    </div>
-                    <div>
-                      <div className="text-lg md:text-2xl font-bold text-[#74B751]">
-                        {Math.round(route.distance / 1000 * 6)}
-                      </div>
-                      <div className="text-xs md:text-sm text-gray-600">₺</div>
                     </div>
                   </div>
                 </div>
